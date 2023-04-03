@@ -1,0 +1,28 @@
+<%- include('partials/header') -%>
+
+<h1>Home</h1>
+
+<p>
+  <%=content%>
+</p>
+
+
+    <% articles.forEach(function (article) { %>
+      <div class="box">
+    <h1>
+        <%=article["title"]%>
+    </h1>
+    <p class="homepage-para"><%=article["content"]%></p>
+
+    <a href="/posts/<%=article["title"]%>">Read More</a>
+    </div>
+    <%});%>
+
+
+
+
+
+
+
+
+<%- include('partials/footer') -%>
